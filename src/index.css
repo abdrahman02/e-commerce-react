@@ -1,0 +1,25 @@
+@import "@fontsource/open-sauce-one/300-italic.css";
+@import "@fontsource/open-sauce-one/400-italic.css";
+@import "@fontsource/open-sauce-one/500-italic.css";
+@import "@fontsource/open-sauce-one/600-italic.css";
+@import "@fontsource/open-sauce-one/700-italic.css";
+@import "@fontsource/open-sauce-one/800-italic.css";
+@import "@fontsource/open-sauce-one/900-italic.css";
+@import "@fontsource/open-sauce-one/300.css";
+@import "@fontsource/open-sauce-one/400.css";
+@import "@fontsource/open-sauce-one/500.css";
+@import "@fontsource/open-sauce-one/600.css";
+@import "@fontsource/open-sauce-one/700.css";
+@import "@fontsource/open-sauce-one/800.css";
+@import "@fontsource/open-sauce-one/900.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-openSouceOne;
+    color: #7a8192;
+  }
+}
