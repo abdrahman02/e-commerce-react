@@ -3,18 +3,44 @@ import logoHorizontal from "../../assets/images/logo-brand-horizontal.png";
 import InputIcon from "../elements/InputIcon";
 import Dropdown from "../elements/Dropdown";
 import Card from "./Card";
+import { Select } from "antd";
+
+const options = [];
+for (let i = 10; i < 36; i++) {
+  options.push({
+    label: i.toString(36) + i,
+    value: i.toString(36) + i,
+  });
+}
+
+const handleChange = (value) => {
+  console.log(`selected ${value}`);
+};
+
 const Navbar = () => {
   return (
-    <header className="navbar sticky bg-base-100 px-4 sm:px-10 md:px-20 justify-between items-center border border-b-slate-200 shadow-sm">
+    <header className="navbar bg-base-100 px-4 sm:px-10 md:px-20 justify-between items-center border border-b-slate-200 shadow-sm">
       {/** Logo */}
       <a href="/" className="w-15 md:w-40">
         <img src={logoHorizontal} alt="logo" />
       </a>
 
-      {/** Input search */}
-      <InputIcon className="w-7/12 input-sm">
-        <Search size={20} color="#9ca3af" />
-      </InputIcon>
+      <div className="w-7/12 gap-2">
+        {/** Input search */}
+        <InputIcon className="w-2/3 input-sm flex flex-row items-center">
+          <Search size={20} color="#9ca3af" />
+        </InputIcon>
+
+        {/** Select kategori */}
+        <Select
+          mode="multiple"
+          allowClear
+          className="w-1/3"
+          placeholder="Please select categories"
+          onChange={handleChange}
+          options={options}
+        />
+      </div>
 
       {/** Cart */}
       <Dropdown type="dropdown-hover" className="dropdown-end">
@@ -23,8 +49,8 @@ const Navbar = () => {
             <ShoppingCart size={20} color="#0eb596" />
           </Dropdown.Trigger.ObjectTrigger>
         </Dropdown.Trigger>
-        <Dropdown.Content tabIndex="0" className="bg-transparent">
-          <Card>
+        <Dropdown.Content tabIndex="0" className="bg-transparent z-[1]">
+          <Card className=" z-[1]">
             <Card.Body className="items-center text-center">
               <CircleX size={44} color="#ff5724" />
               <Card.Title className="text-slate-700 text-lg font-bold">
@@ -50,7 +76,7 @@ const Navbar = () => {
             <Bell size={20} color="#0eb596" />
           </Dropdown.Trigger.ObjectTrigger>
         </Dropdown.Trigger>
-        <Dropdown.Content tabIndex="0" className="bg-transparent">
+        <Dropdown.Content tabIndex="0" className="bg-transparent z-[1]">
           <Card>
             <Card.Body className="items-center text-center">
               <CircleX size={44} color="#ff5724" />

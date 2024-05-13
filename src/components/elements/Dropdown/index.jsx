@@ -46,7 +46,7 @@ const Content = ({ children, tabIndex, className }) => {
   return (
     <div
       tabIndex={tabIndex}
-      className={`z-[1] p-2 menu menu-sm dropdown-content rounded-box ${className}`}
+      className={`p-2 menu menu-sm dropdown-content rounded-box ${className}`}
     >
       {children}
     </div>
