@@ -1,4 +1,11 @@
-import { Bell, CircleX, Search, ShoppingCart } from "lucide-react";
+import {
+  Bell,
+  CircleX,
+  Search,
+  ShoppingCart,
+  LogIn,
+  UserPlus,
+} from "lucide-react";
 import logoHorizontal from "../../assets/images/logo-brand-horizontal.png";
 import InputIcon from "../elements/InputIcon";
 import Dropdown from "../elements/Dropdown";
@@ -91,9 +98,11 @@ const Navbar = () => {
 
       <div className="action gap-3">
         <button className="btn btn-sm btn-outline btn-primary text-md font-bold tracking-wide">
+          <LogIn size={17} />
           Masuk
         </button>
         <button className="btn btn-sm btn-primary text-md font-bold tracking-wide">
+          <UserPlus size={17} />
           Daftar
         </button>
       </div>

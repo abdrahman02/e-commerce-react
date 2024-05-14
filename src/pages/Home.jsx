@@ -19,7 +19,7 @@ const images = [
 const Home = () => {
   return (
     <main className="px-20 py-8 h-[5000px]">
-      <div className="flex flex-wrap justify-start items-center gap-x-4 gap-y-8">
+      <section className="flex flex-wrap justify-start items-center gap-x-4 gap-y-8">
         {images.map((image, index) => (
           <Card
             key={index}
@@ -50,7 +50,7 @@ const Home = () => {
             />
           </Card>
         ))}
-      </div>
+      </section>
     </main>
   );
 };

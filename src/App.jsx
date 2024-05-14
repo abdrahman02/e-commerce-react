@@ -1,13 +1,24 @@
-import Navbar from "./components/fragments/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FoLayout from "./components/layouts/FoLayouts";
 import Home from "./pages/Home";
+import Auth from "./pages/Auth";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Navbar />
-      <Home />
-    </>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <FoLayout>
+              <Home />
+            </FoLayout>
+          }
+        />
+        <Route path="/authentication" element={<Auth />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
